@@ -9,8 +9,7 @@ const forecast = (latitude, longitude, callback) => {
         else if(body.error){
             callback('Geo-points added are invalid', undefined)
         }else{
-            callback(undefined, ' It is currently ' + body.main.temp + ' degrees. There is '+ body.main.humidity + '% chance of rain!')
-            
+            callback(undefined, ' It is currently ' + body.main.temp + ' degrees out. There is '+ body.main.humidity + '% chance of rain! with a wind speed of ' + body.wind.speed) 
         }
     })
 }
